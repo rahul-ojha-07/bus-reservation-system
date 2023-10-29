@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+
+spring:
+  profiles:
+    active: @activatedProperties@
+  datasource:
+    url: bjb
+    username: bcs
+    password: kh
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: ${SHOW_SQL:false}
+
+logging:
+  level:
+    web:${LOG_LEVEL:DEBUG}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
