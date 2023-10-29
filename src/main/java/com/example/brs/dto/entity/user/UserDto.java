@@ -18,7 +18,7 @@ public class UserDto {
     private String firstName;
     private String lastName;
     private String mobileNumber;
-    private Boolean isAdmin;
+    private boolean isAdmin;
     private Collection<RoleDto> roles;
 
     public String getFullName() {
