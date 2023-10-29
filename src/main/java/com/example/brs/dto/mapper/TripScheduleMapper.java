@@ -6,7 +6,7 @@ import com.example.brs.entity.bus.TripSchedule;
 
 public class TripScheduleMapper {
     public static TripScheduleDto toTripScheduleDto(TripSchedule tripSchedule) {
-        Trip tripDetails = tripSchedule.getTrip();
+        Trip tripDetails = tripSchedule.getTripDetails();
         return TripScheduleDto.builder()
                 .withId(tripSchedule.getId())
                 .withTripId(tripDetails.getId())
