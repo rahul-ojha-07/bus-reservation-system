@@ -2,10 +2,16 @@ package com.example.brs.entity.bus;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder(setterPrefix = "with")
 @Table(name = "trip_schedule")
 public class TripSchedule {
     @Id
@@ -21,5 +27,5 @@ public class TripSchedule {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "trip_id")
-    private Trip trip;
+    private Trip tripDetails;
 }

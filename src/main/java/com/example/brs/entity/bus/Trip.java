@@ -2,10 +2,16 @@ package com.example.brs.entity.bus;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder(setterPrefix = "with")
 @Table(name = "trip")
 public class Trip {
     @Id
